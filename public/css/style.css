@@ -1,0 +1,40 @@
+.strike span {
+    text-decoration: line-through;
+    color: #ccc;
+}
+.todos {
+    padding: 20px;
+}
+.todo {
+    padding: 10px;
+    font-size: 21px;
+    border-bottom: 1px solid cornflowerblue;
+}
+.todo .btn {
+    margin-left: 5px;
+    width: 72px;
+}
+.todo:hover {
+    background: #e7e7e7;
+}
+.title {
+	color: #0E3346;
+    background-color: #7ABACC;
+    border-color: #bce8f1;
+    padding: 9px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: larger;
+}
+.no-padding {
+	padding: 0 1em 0 0;
+}
+.lg-button{
+	padding: 10px 10px;
+    font-size: 16px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+.navigation {
+	margin-top: 10px;
+}
