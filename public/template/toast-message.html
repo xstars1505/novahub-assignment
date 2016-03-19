@@ -1,0 +1,65 @@
+<md-toast class='popup-toast-center' style="padding: 0px 0px 0px 0px;">
+<style>
+.popup-alert-success {
+	background-color: #4caf50 !important;
+	border-color: #4caf50 !important;
+	color: #F6F9F4 !important;
+}
+.popup-toast-success{
+	min-height: 80px;
+	border-color: #4caf50;
+	border: 1px solid #4caf50;
+	border-radius: 3px;
+	width: 100%;
+}
+.popup-toast-error{
+	min-height: 80px;
+	border-color: #CF3826 ;
+	border: 1px solid #CF3826;
+	border-radius: 3px;
+	width: 100%;
+}
+.popup-alert-error {
+	background-color: #CF3826  !important;
+	border-color: #CF3826  !important;
+	color: #FAFAFA !important;
+}
+.popup-toast-center {
+    position: fixed;
+	left: 35%;
+	z-index: 1000;
+	min-height: 70px;
+	opacity: 0.9;
+}
+.popup-toast-center:HOVER{
+	opacity: 1;
+}
+.popup-success-color{
+	color:#4caf50;
+}
+.popup-error-color{
+	color:#CF3826;
+}
+
+.popup-remove-icon:HOVER{
+	font-size: 2.6em;
+}
+
+</style>
+	<div flex layout="row" class="md-whiteframe-z1" ng-class= "status=='success'? 'popup-toast-success' : 'popup-toast-error'">
+	  <div flex='20' style="max-width: 50px;"layout="column" layout-align="center center" ng-class= "status=='success'? 'popup-alert-success' : 'popup-alert-error'">
+	  		<i ng-class="status=='success' ? 'fa fa-check fa-3x':'fa fa-exclamation fa-3x' "></i>
+	  </div>
+	  <div flex style="background-color: whitesmoke;" layout="row">
+	  		<div flex="80" layout="column" style ="margin-left:5px; text-align: center; font-size: 15px;" layout-align="center center">
+	  			<span ng-if="message.indexOf('v3.')>-1"style="color:black;">{{message | translate}}</span>
+	  			<span ng-if="message.indexOf('v3.')<0"style="color:black;">{{message}}</span>
+	  		</div>
+	  		<div flex="20" layout="column" layout-align="center center">
+	  			<div style="width: 30px;">
+		  			<i ng-class= "status=='success'? 'popup-success-color' : 'popup-error-color'" ng-click="closeToast()"  class="fa fa-times-circle fa-2x pointer popup-remove-icon"></i>
+		  		</div>
+	  		</div>
+	  </div> 
+	</div>
+</md-toast>

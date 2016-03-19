@@ -18,7 +18,7 @@
     background: #e7e7e7;
 }
 .title {
-	color: #0E3346;
+    color: #0E3346;
     background-color: #7ABACC;
     border-color: #bce8f1;
     padding: 9px;
@@ -27,14 +27,36 @@
     font-size: larger;
 }
 .no-padding {
-	padding: 0 1em 0 0;
+    padding: 0 1em 0 0;
 }
 .lg-button{
-	padding: 10px 10px;
+    padding: 10px 10px;
     font-size: 16px;
     line-height: 1.3333333;
     border-radius: 6px;
 }
 .navigation {
-	margin-top: 10px;
+    margin-top: 10px;
+}
+.error {
+    color: red;
+}
+.action {
+    min-height: 71px;
+}
+.action > button {
+    position: absolute;
+    bottom: 0;
+}
+#full-loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #252533;
+    z-index: 9999;
+    opacity: 0.7;
+    left: 0;
+    display:none;
 }

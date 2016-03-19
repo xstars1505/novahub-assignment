@@ -4,19 +4,38 @@
     <title>AngularJS Routing example</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
- 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
   </head>
  
   <body ng-app="boatApp">
- 
+    <div id="full-loading" class="ipos_popup_overlay" aria-hidden="false" style="display: none;"> 
+      <div style="position:fixed; top:85px; left:40%;z-index:999"> 
+        <md-progress-circular style="" md-mode="indeterminate"></md-progress-circular> 
+      </div>
+    </div>
     <div class="container">
         <div class="row">
+
           <div ui-view></div>
         </div>
     </div>
     <script src="js/angular.js"></script>
     <script src="js/angular-resource.min.js"></script>
     <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/ng-file-upload.js"></script>
+    
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/common-service.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

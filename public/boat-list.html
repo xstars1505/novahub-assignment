@@ -3,15 +3,21 @@
         <h3>Boat List</h3>
     </div>
     <div class="alert col-md-12 col-sm-12 col-xs-12 col-lg-12">
-        <div class="col-lg-5">
-            <input class="form-control input-lg" ng-model="boat.name" placeholder="Enter the boat name" />
-        </div>
-        <div class="col-lg-4">
-            <input type="file" file="file" class="form-control input-lg" />
-        </div>
-        <div class="col-lg-3 pull-right">
-            <input type="button" class="btn btn-info lg-button" value="Add New Boat" ng-click="addBoat(boat.name, file)" />
-        </div>
+        <form name="userForm" novalidate class="row">
+            <div class="form-group col-lg-4">
+                <label class="control-label">Boat Name</label>
+                <input type="text" class="form-control input-lg" name="boatName" ng-model="boat.name" required placeholder="Boat Name" />
+                <span class="error" ng-show="userForm.boatName.$invalid && userForm.boatName.$dirty">Required!</span>
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="control-label">Image</label>
+                <input class="form-control input-lg" type="file" ngf-select="" ng-model="file" name="boatImage" ngf-accept="'image/*'" required="">
+                <span class="error" ng-show="userForm.boatImage.$invalid && userForm.boatImage.$dirty">Required!</span>
+            </div>
+            <div class="form-group col-lg-3 action">
+                <button class="btn btn-primary btn-lg" ng-disabled="userForm.$invalid" ng-click="addBoat(boat.name, file)">Add New Boat</button>
+            </div>
+        </form>
     </div>
     <div class="title col-md-12 col-sm-12 col-xs-12 col-lg-12">
         <div class="col-md-3 col-sm-3 col-xs-3 col-lg-5">
@@ -32,7 +38,7 @@
             <span>{{boat.name}}</span>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 text-center">
-        	<input type="button" class="btn btn-info" value="Detail" ng-click="getBoatDetail(boat.id)" />
+            <input type="button" class="btn btn-info" value="Detail" ng-click="getBoatDetail(boat.id)" />
             <input type="button" class="btn btn-danger" value="Delete" ng-click="deleteBoat(boat.id)" />
         </div>
     </div>
